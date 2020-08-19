@@ -1,17 +1,18 @@
-import Page from "components/pages/index";
-import WithGraphQL from "lib/with-graphql";
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
+import Page from "components/pages/index";
+import { NextPage } from "next";
+import WithGraphQL from "lib/with-graphql";
 
-const Home = () => {
+const IndexPage: NextPage = () => {
   return (
     <WithGraphQL>
       <Head>
-        <title>My Account Page</title>
+        <title>Index Page</title>
       </Head>
       <Page />
     </WithGraphQL>
   );
 };
 
-export default Home;
+export default IndexPage;

@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Box, Stack } from "@chakra-ui/core";
 import Feed from "components/pages/index/feed";
 import React from "react";
+import IFeed from "types/feed";
 
 const feedsQuery = gql`
   query fetchFeeds {
@@ -27,7 +28,7 @@ const FeedsPageComponent = () => {
 
   return (
     <Stack spacing={8}>
-      {data.feeds.map((feed) => {
+      {data.feeds.map((feed: IFeed) => {
         return (
           <Box key={feed.id}>
             <Feed feed={feed} />

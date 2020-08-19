@@ -1,13 +1,15 @@
 {
-  "name": "frontend",
+  "name": "nextjs-strapi-boilerplate-frontend",
   "version": "0.0.1",
   "author": "nirmalya.email@gmail.com",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "build:analyze": "ANALYZE=true next build && tsc --project tsconfig.server.json",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "export": "next export"
+    "type-check": "tsc"
   },
   "dependencies": {
     "@apollo/client": "^3.1.3",
@@ -19,5 +21,14 @@
     "next": "9.5.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "tslint": "^6.1.3",
+    "tslint-react": "^5.0.0",
+    "typescript": "^3.9.7"
   }
 }

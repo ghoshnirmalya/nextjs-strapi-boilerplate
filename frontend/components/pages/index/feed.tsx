@@ -1,7 +1,12 @@
 import { Box, Stack, Text, useColorMode } from "@chakra-ui/core";
-import React from "react";
+import React, { FC } from "react";
+import IFeed from "types/feed";
 
-const Feed = ({ feed }) => {
+interface IProps {
+  feed: IFeed;
+}
+
+const Feed: FC<IProps> = ({ feed }) => {
   const { colorMode } = useColorMode();
   const bgColor = { light: "white", dark: "gray.800" };
   const color = { light: "gray.800", dark: "gray.100" };
@@ -19,6 +24,7 @@ const Feed = ({ feed }) => {
       >
         <Stack>
           <Text fontWeight="bold">{feed.author.username}</Text>
+          <Text>{feed.created_at}</Text>
         </Stack>
       </Stack>
     );
