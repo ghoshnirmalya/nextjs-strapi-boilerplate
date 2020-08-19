@@ -17,8 +17,7 @@
       "components/*": ["components/*"],
       "lib/*": ["lib/*"],
       "pages/*": ["pages/*"],
-      "types/*": ["types/*"],
-      "configs/*": ["configs/*"]
+      "types/*": ["types/*"]
     },
     "strict": false,
     "forceConsistentCasingInFileNames": true
