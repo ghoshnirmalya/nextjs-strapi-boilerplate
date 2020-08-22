@@ -16,7 +16,6 @@ This is a boilerplate for building applications using Strapi and Next.js. This b
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Packages](#packages)
@@ -63,7 +62,7 @@ This application is the primary user-facing application. Once it’s up and runn
 
 ### 2. [**Backend**](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/tree/master/backend): Dockerized Strapi application
 
-[Strapi](https://strapi.io/) is the leading open-source headless CMS. It’s 100% Javascript, fully customizable and developer-first..
+[Strapi](https://strapi.io/) is the leading open-source headless CMS. It’s 100% Javascript, fully customizable and developer-first.
 
 ## Installation
 
@@ -105,7 +104,7 @@ cd packages/backend
 docker-compose up
 ```
 
-We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on http://localhost:8080/v1/graphql.
+We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on http://localhost:1337/v1/graphql.
 
 ## Deployment
 
