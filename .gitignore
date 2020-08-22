@@ -1,8 +1,11 @@
 **/.DS_STORE
 node_modules
+**/node_modules
 .next
 **/.env
 out
 **/*.pem
 .vercel
-**/backend/data
+**/.cache
+backend/data
+backend/build

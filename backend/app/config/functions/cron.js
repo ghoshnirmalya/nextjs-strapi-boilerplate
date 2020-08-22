@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Cron config that gives you an opportunity
