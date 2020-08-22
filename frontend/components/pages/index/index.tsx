@@ -1,42 +1,90 @@
-import { gql, useQuery } from "@apollo/client";
-import { Box, Stack } from "@chakra-ui/core";
-import Feed from "components/pages/index/feed";
 import React from "react";
-import IFeed from "types/feed";
+import {
+  Box,
+  Heading,
+  Stack,
+  Text,
+  Button,
+  Flex,
+  useColorMode,
+} from "@chakra-ui/core";
+import { signIn, signOut, useSession } from "next-auth/client";
+import Link from "next/link";
 
-const feedsQuery = gql`
-  query fetchFeeds {
-    feeds {
-      id
-      created_at
-      body
-      author {
-        id
-        username
-      }
+const IndexPageComponent = () => {
+  const [session] = useSession();
+  const heightOfNavbar: string = "74px";
+  const containerPadding: string = "1rem";
+  const { colorMode } = useColorMode();
+  const color = { light: "gray.800", dark: "gray.100" };
+
+  const signInButtonNode = () => {
+    if (session) {
+      return false;
     }
-  }
-`;
 
-const FeedsPageComponent = () => {
-  const { loading, error, data } = useQuery(feedsQuery);
+    return (
+      <Box>
+        <Link href="/api/auth/signin">
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              signIn();
+            }}
+          >
+            Create an account
+          </Button>
+        </Link>
+      </Box>
+    );
+  };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  const signOutButtonNode = () => {
+    if (!session) {
+      return false;
+    }
 
-  console.info(data);
+    return (
+      <Box>
+        <Link href="/api/auth/signout">
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              signOut();
+            }}
+          >
+            Sign Out
+          </Button>
+        </Link>
+      </Box>
+    );
+  };
 
   return (
-    <Stack spacing={8}>
-      {data.feeds.map((feed: IFeed) => {
-        return (
-          <Box key={feed.id}>
-            <Feed feed={feed} />
+    <Stack>
+      <Flex
+        minH={`calc(100vh - ${heightOfNavbar} - ${containerPadding}*2)`}
+        justifyContent="center"
+        alignItems="center"
+        color={color[colorMode]}
+      >
+        <Stack spacing={4} maxW="xl" mx="auto">
+          <Heading textAlign="center">Nextjs Strapi Boilerplate</Heading>
+          <Text fontSize="xl" lineHeight="tall" textAlign="center">
+            Boilerplate for building applications using Strapi and Next.js. This
+            demo application has been built using Chakra UI, NextAuth.js and
+            urql.
+          </Text>
+          <Box>
+            <Stack isInline align="center" justifyContent="center">
+              {signInButtonNode()}
+              {signOutButtonNode()}
+            </Stack>
           </Box>
-        );
-      })}
+        </Stack>
+      </Flex>
     </Stack>
   );
 };
 
-export default FeedsPageComponent;
+export default IndexPageComponent;
