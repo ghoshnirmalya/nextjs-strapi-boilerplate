@@ -100,7 +100,7 @@ const Navbar: NextComponentType = () => {
   return (
     <Box bg={bgColor[colorMode]}>
       <Box p={4} color={color[colorMode]} shadow="lg" pos="relative">
-        <Box maxW="6xl" mx="auto" w="full">
+        <Box maxW="xl" mx="auto" w="full">
           <Stack
             isInline
             spacing={4}

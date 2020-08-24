@@ -1,33 +1,43 @@
 import React from "react";
 import gql from "graphql-tag";
-import { useSubscription } from "urql";
+import { useQuery } from "urql";
 import { Box, Stack } from "@chakra-ui/core";
 import IFeed from "types/feed";
 import Feed from "components/pages/feeds/feed";
 import AddNewFeedForm from "components/pages/feeds/add-new-feed-form";
+import Loader from "components/loader";
 
-const feedsSubscription = gql`
-  subscription fetchFeeds {
-    feeds(order_by: { created_at: desc }) {
+const feedsQuery = gql`
+  query fetchFeeds {
+    feeds(sort: "created_at:desc") {
       id
       created_at
       body
       author {
         id
-        name
-        image
+        username
       }
     }
   }
 `;
 
 const FeedsPageComponent = () => {
-  const [result] = useSubscription({
-    query: feedsSubscription,
+  const [
+    {
+      data: fetchFeedsData,
+      fetching: fetchFeedsFetching,
+      error: fetchFeedsError,
+    },
+  ] = useQuery({
+    query: feedsQuery,
   });
 
-  if (!result.data) {
-    return <p>No feeds!</p>;
+  if (fetchFeedsFetching) {
+    return <Loader />;
+  }
+
+  if (fetchFeedsError) {
+    return <p>Error: {fetchFeedsError.message}</p>;
   }
 
   return (
@@ -35,7 +45,7 @@ const FeedsPageComponent = () => {
       <Box>
         <AddNewFeedForm />
       </Box>
-      {result.data.feeds.map((feed: IFeed) => {
+      {fetchFeedsData.feeds.map((feed: IFeed) => {
         return (
           <Box key={feed.id}>
             <Feed feed={feed} />

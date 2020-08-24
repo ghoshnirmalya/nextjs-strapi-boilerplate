@@ -24,13 +24,13 @@ const WithGraphQL = ({
   session: session;
   children: ReactNode;
 }) => {
-  const userIdInString = session.id.toString();
+  const token = session?.jwt?.toString();
 
   const client = new Client({
     url: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/v1/graphql",
     fetch,
     fetchOptions: {
-      headers: { "X-User-Id": userIdInString },
+      headers: { Authorization: `Bearer ${token}` },
     },
     requestPolicy: "cache-and-network",
     exchanges: [...defaultExchanges],

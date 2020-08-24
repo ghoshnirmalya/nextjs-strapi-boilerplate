@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feeds",
+  "info": {
+    "name": "Feed"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "body": {
+      "type": "text"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

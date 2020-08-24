@@ -18,9 +18,11 @@ import { useSession } from "next-auth/client";
 import AccessDeniedIndicator from "components/access-denied-indicator";
 
 const insertFeedMutation = gql`
-  mutation insertFeed($userId: uuid!, $body: String) {
-    insert_feeds_one(object: { author_id: $userId, body: $body }) {
-      id
+  mutation insertFeed($userId: ID!, $body: String) {
+    createFeed(input: { data: { author: $userId, body: $body } }) {
+      feed {
+        id
+      }
     }
   }
 `;
@@ -60,7 +62,7 @@ const AddNewFeedForm = () => {
     return (
       <Alert status="error">
         <AlertIcon />
-        <AlertTitle>{insertFeedError}</AlertTitle>
+        <AlertTitle>{insertFeedError.message}</AlertTitle>
         <CloseButton position="absolute" right="8px" top="8px" />
       </Alert>
     );

@@ -1,4 +1,5 @@
 export default interface ISession {
+  jwt: string;
   user: {
     name: string;
     email: string;
