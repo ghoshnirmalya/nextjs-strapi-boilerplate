@@ -1,3 +1,15 @@
+# [0.1.0](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.0.3...0.1.0) (2020-08-27)
+
+### Bug Fixes
+
+- fixes issues with authorization ([86802d3](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/86802d3effc139875261cac0a8eeb8c8cf08dacf))
+
+### Features
+
+- adds authentication using NextAuth ([329dc81](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/329dc81638f0e92a31fa3af07708da806935c3c3))
+- handles auth with NextAuth ([5ac7fc3](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/5ac7fc318eee16dee84c1fe44a680cde3b729196))
+- uses Postgres database ([2a373b9](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/2a373b9882f6bc7f7dfa78061816b40be62e68cf))
+
 ## [0.0.3](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.0.2...0.0.3) (2020-08-27)
 
 ### Bug Fixes
