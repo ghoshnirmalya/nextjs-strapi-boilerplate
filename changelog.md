@@ -1,3 +1,9 @@
+# [0.2.0](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.1.0...0.2.0) (2020-08-27)
+
+### Features
+
+- uses Apollo for GraphQL ([ce53c91](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/ce53c912eb50b9de0ae1e1226b1cdc9d0f7a4541))
+
 # [0.1.0](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.0.3...0.1.0) (2020-08-27)
 
 ### Bug Fixes
