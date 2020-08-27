@@ -9,9 +9,9 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.1.4",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "release-it": "^13.6.6"
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1",
+    "release-it": "^13.7.0"
   },
   "husky": {
     "hooks": {
