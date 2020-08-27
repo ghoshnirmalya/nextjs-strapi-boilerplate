@@ -73,7 +73,7 @@ const IndexPageComponent = () => {
           <Text fontSize="xl" lineHeight="tall" textAlign="center">
             Boilerplate for building applications using Strapi and Next.js. This
             demo application has been built using Chakra UI, NextAuth.js and
-            urql.
+            Apollo.
           </Text>
           <Box>
             <Stack isInline align="center" justifyContent="center">

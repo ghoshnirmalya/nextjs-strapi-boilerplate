@@ -1,6 +1,5 @@
 import React, { useState, FormEvent } from "react";
-import gql from "graphql-tag";
-import { useMutation } from "urql";
+import { gql, useMutation, useQuery } from "@apollo/client";
 import {
   Box,
   Stack,
@@ -22,6 +21,7 @@ const insertFeedMutation = gql`
     createFeed(input: { data: { author: $userId, body: $body } }) {
       feed {
         id
+        body
       }
     }
   }
@@ -41,15 +41,12 @@ const AddNewFeedForm = () => {
   }
 
   const [
-    { fetching: insertFeedFetching, error: insertFeedError },
     insertFeed,
+    { loading: insertFeedFetching, error: insertFeedError },
   ] = useMutation(insertFeedMutation);
 
   const handleSubmit = async () => {
-    await insertFeed({
-      userId: session.id,
-      body,
-    });
+    await insertFeed({ variables: { userId: session.id, body } });
 
     setBody("");
   };

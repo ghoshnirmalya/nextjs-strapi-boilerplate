@@ -12,21 +12,18 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@apollo/client": "^3.1.3",
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
     "dayjs": "^1.8.34",
     "emotion-theming": "^10.0.27",
     "graphql": "^15.3.0",
-    "graphql-tag": "^2.11.0",
-    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.5.2",
     "next-auth": "^3.1.0",
-    "next-urql": "^1.1.0",
     "pg": "^8.3.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "urql": "^1.10.0"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@types/next": "^9.0.0",

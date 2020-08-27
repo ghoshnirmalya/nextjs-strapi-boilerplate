@@ -1,11 +1,10 @@
-import React from "react";
-import gql from "graphql-tag";
-import { useQuery } from "urql";
+import { gql, useQuery } from "@apollo/client";
 import { Box, Stack } from "@chakra-ui/core";
-import IFeed from "types/feed";
-import Feed from "components/pages/feeds/feed";
-import AddNewFeedForm from "components/pages/feeds/add-new-feed-form";
 import Loader from "components/loader";
+import AddNewFeedForm from "components/pages/feeds/add-new-feed-form";
+import Feed from "components/pages/feeds/feed";
+import React from "react";
+import IFeed from "types/feed";
 
 const feedsQuery = gql`
   query fetchFeeds {
@@ -22,15 +21,11 @@ const feedsQuery = gql`
 `;
 
 const FeedsPageComponent = () => {
-  const [
-    {
-      data: fetchFeedsData,
-      fetching: fetchFeedsFetching,
-      error: fetchFeedsError,
-    },
-  ] = useQuery({
-    query: feedsQuery,
-  });
+  const {
+    loading: fetchFeedsFetching,
+    error: fetchFeedsError,
+    data: fetchFeedsData,
+  } = useQuery(feedsQuery, { pollInterval: 5000 });
 
   if (fetchFeedsFetching) {
     return <Loader />;
