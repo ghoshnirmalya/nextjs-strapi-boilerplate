@@ -1,23 +1,22 @@
-import React, { useEffect, useState, FormEvent } from "react";
-import gql from "graphql-tag";
-import { useQuery, useMutation } from "urql";
+import { gql, useMutation, useQuery } from "@apollo/client";
 import {
-  Box,
-  Stack,
-  FormControl,
-  FormLabel,
-  Input,
-  useColorMode,
-  Heading,
-  Button,
-  Grid,
   Alert,
   AlertIcon,
   AlertTitle,
+  Box,
+  Button,
   CloseButton,
+  FormControl,
+  FormLabel,
+  Grid,
+  Heading,
+  Input,
+  Stack,
+  useColorMode,
 } from "@chakra-ui/core";
 import Loader from "components/loader";
 import { useSession } from "next-auth/client";
+import React, { FormEvent, useEffect, useState } from "react";
 
 const usersQuery = gql`
   query fetchUser($userId: ID!) {
@@ -48,13 +47,12 @@ const MyAccountPageComponent = () => {
   const [username, setUsername] = useState("");
   const [session] = useSession();
 
-  const [
-    { data: fetchUserData, fetching: fetchUserFetching, error: fetchUserError },
-  ] = useQuery({
-    query: usersQuery,
-    variables: {
-      userId: session.id,
-    },
+  const {
+    loading: fetchUserFetching,
+    error: fetchUserError,
+    data: fetchUserData,
+  } = useQuery(usersQuery, {
+    variables: { userId: session.id },
   });
 
   useEffect(() => {
@@ -66,8 +64,8 @@ const MyAccountPageComponent = () => {
   }, [fetchUserData]);
 
   const [
-    { fetching: updateUserFetching, error: updateUserError },
     updateUser,
+    { loading: updateUserFetching, error: updateUserError },
   ] = useMutation(updateUserMutation);
 
   if (fetchUserFetching) {
@@ -79,10 +77,7 @@ const MyAccountPageComponent = () => {
   }
 
   const handleSubmit = () => {
-    updateUser({
-      userId: session.id,
-      username,
-    });
+    updateUser({ variables: { userId: session.id, username } });
   };
 
   const errorNode = () => {

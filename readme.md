@@ -43,7 +43,7 @@ This boilerplate is built using the following technologies:
 1. [Chakra UI](https://chakra-ui.com/)
 2. [Emotion](https://emotion.sh/)
 3. [GraphQL](https://graphql.org/)
-4. [urql](https://formidable.com/open-source/urql/)
+4. [Apollo](https://www.apollographql.com/)
 5. [NextAuth](https://next-auth.js.org/)
 6. [TypeScript](https://www.typescriptlang.org/)
 
