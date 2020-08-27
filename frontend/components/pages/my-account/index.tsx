@@ -20,20 +20,22 @@ import Loader from "components/loader";
 import { useSession } from "next-auth/client";
 
 const usersQuery = gql`
-  query fetchUser($userId: uuid!) {
-    users_by_pk(id: $userId) {
+  query fetchUser($userId: ID!) {
+    user(id: $userId) {
       id
-      name
+      username
     }
   }
 `;
 
 const updateUserMutation = gql`
-  mutation updateUser($userId: uuid!, $name: String) {
-    update_users(where: { id: { _eq: $userId } }, _set: { name: $name }) {
-      returning {
+  mutation updateUser($userId: ID!, $username: String) {
+    updateUser(
+      input: { where: { id: $userId }, data: { username: $username } }
+    ) {
+      user {
         id
-        name
+        username
       }
     }
   }
@@ -43,7 +45,7 @@ const MyAccountPageComponent = () => {
   const { colorMode } = useColorMode();
   const bgColor = { light: "white", dark: "gray.800" };
   const color = { light: "gray.800", dark: "gray.100" };
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [session] = useSession();
 
   const [
@@ -57,9 +59,9 @@ const MyAccountPageComponent = () => {
 
   useEffect(() => {
     if (fetchUserData) {
-      const { name } = fetchUserData.users_by_pk;
+      const { username } = fetchUserData.user;
 
-      setName(name || "");
+      setUsername(username || "");
     }
   }, [fetchUserData]);
 
@@ -79,7 +81,7 @@ const MyAccountPageComponent = () => {
   const handleSubmit = () => {
     updateUser({
       userId: session.id,
-      name,
+      username,
     });
   };
 
@@ -101,10 +103,7 @@ const MyAccountPageComponent = () => {
     <Stack spacing={4}>
       <Heading color={color[colorMode]}>My Account</Heading>
       {errorNode()}
-      <Grid
-        templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
-        gap={4}
-      >
+      <Grid templateColumns="repeat(1, 1fr)" gap={4}>
         <Box
           p={4}
           bg={bgColor[colorMode]}
@@ -114,13 +113,13 @@ const MyAccountPageComponent = () => {
         >
           <Stack spacing={4}>
             <FormControl isRequired>
-              <FormLabel htmlFor="name">Name</FormLabel>
+              <FormLabel htmlFor="username">Username</FormLabel>
               <Input
                 type="text"
-                id="name"
-                value={name}
+                id="username"
+                value={username}
                 onChange={(e: FormEvent<HTMLInputElement>) =>
-                  setName(e.currentTarget.value)
+                  setUsername(e.currentTarget.value)
                 }
                 isDisabled={updateUserFetching}
               />

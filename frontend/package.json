@@ -23,9 +23,9 @@
     "next": "^9.5.2",
     "next-auth": "^3.1.0",
     "next-urql": "^1.1.0",
+    "pg": "^8.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sqlite3": "^5.0.0",
     "urql": "^1.10.0"
   },
   "devDependencies": {
