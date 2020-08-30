@@ -47,7 +47,7 @@ This boilerplate is built using the following technologies:
 5. [NextAuth](https://next-auth.js.org/)
 6. [TypeScript](https://www.typescriptlang.org/)
 
-It supports GraphQL Query, Mutation and Subscription out of the box.
+It supports GraphQL Query and Mutation out of the box.
 
 ## Requirements
 
@@ -81,7 +81,11 @@ cd frontend && yarn install
 
 ### 3. **Create a .env file and copy the contents from .env.example (present in frontend directory)**
 
-### 4. **Start the frontend application**
+### 4. **Create and copy the Google client credentials**
+
+Create a new [Google OAuth Client](https://console.developers.google.com/apis/credentials/oauthclient) and copy the credentials (Client ID and Client Secret) in your .env file.
+
+### 5. **Start the frontend application**
 
 From the frontend directory, we can run the following command to start our Next.js frontend application:
 
@@ -91,19 +95,19 @@ yarn dev
 
 The above command will start the frontend application on [http://localhost:3000/](http://localhost:3000).
 
-### 5. **Go inside the directory of the backend package on another terminal window**
+### 6. **Go inside the directory of the backend package on another terminal window**
 
 ```sh
 cd packages/backend
 ```
 
-### 6. **Start docker-compose**
+### 7. **Start docker-compose**
 
 ```sh
 docker-compose up
 ```
 
-We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on http://localhost:1337/v1/graphql.
+We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on [http://localhost:1337/v1/graphql](http://localhost:1337/v1/graphql).
 
 ## Deployment
 
