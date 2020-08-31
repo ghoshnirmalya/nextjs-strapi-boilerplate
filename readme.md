@@ -81,6 +81,12 @@ cd frontend && yarn install
 
 ### 3. **Create a .env file and copy the contents from .env.example (present in frontend directory)**
 
+We might need to run the following command:
+
+```sh
+source .env
+```
+
 ### 4. **Create and copy the Google client credentials**
 
 Create a new [Google OAuth Client](https://console.developers.google.com/apis/credentials/oauthclient) and copy the credentials (Client ID and Client Secret) in your .env file.
@@ -98,7 +104,7 @@ The above command will start the frontend application on [http://localhost:3000/
 ### 6. **Go inside the directory of the backend package on another terminal window**
 
 ```sh
-cd packages/backend
+cd backend
 ```
 
 ### 7. **Start docker-compose**
@@ -108,6 +114,26 @@ docker-compose up
 ```
 
 We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on [http://localhost:1337/v1/graphql](http://localhost:1337/v1/graphql).
+
+### 8. **Configure Strapi**
+
+a. Allow permissions for all operations on the Feed content-type for Authenticated users.
+
+![Authenticated user role](https://user-images.githubusercontent.com/6391763/91742056-40711100-ebd3-11ea-8430-2e09016901ad.png)
+
+![Allow permissions for all operations on the Feed content-type for Authenticated users](https://user-images.githubusercontent.com/6391763/91742068-449d2e80-ebd3-11ea-9830-df26a3bbfed6.png)
+
+b. Allow permissions for all operations on the Feed content-type for Authenticated users as well.
+
+![Allow permissions for all operations on the Feed content-type for Authenticated users as well](https://user-images.githubusercontent.com/6391763/91742071-45ce5b80-ebd3-11ea-8345-abdbf52c7e41.png)
+
+c. Enable the Google provider.
+
+![Enable the Google provider](https://user-images.githubusercontent.com/6391763/91742074-46ff8880-ebd3-11ea-82c8-5a08e3ecf3de.png)
+
+![Enable informations for the Google provider](https://user-images.githubusercontent.com/6391763/91742078-47981f00-ebd3-11ea-97e4-9cd8c2a27f05.png)
+
+d. Click on the "Done" button and now we can log into our Next.js application using our Google account.
 
 ## Deployment
 
