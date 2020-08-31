@@ -30,7 +30,7 @@ const options = {
 
       if (isSignIn) {
         const response = await fetch(
-          `http://localhost:1337/auth/${account.provider}/callback?access_token=${account?.accessToken}`
+          `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.accessToken}`
         );
 
         const data = await response.json();
