@@ -113,7 +113,7 @@ cd backend
 docker-compose up
 ```
 
-We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on [http://localhost:1337/v1/graphql](http://localhost:1337/v1/graphql).
+We need to start Docker and then run the above command which will change the current directory to the backend package’s directory and then start the backend package. If everything goes well, it’ll be up and running on [http://localhost:1337/graphql](http://localhost:1337/graphql).
 
 ### 8. **Configure Strapi**
 
