@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.2.1...0.3.0) (2020-08-31)
+
+### Features
+
+- updates readme.md file ([ab1e206](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/commit/ab1e2065fcc49f4921c83c1215314316f870985b))
+
 ## [0.2.1](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.2.0...0.2.1) (2020-08-30)
 
 # [0.2.0](https://github.com/ghoshnirmalya/nextjs-strapi-boilerplate/compare/0.1.0...0.2.0) (2020-08-27)
