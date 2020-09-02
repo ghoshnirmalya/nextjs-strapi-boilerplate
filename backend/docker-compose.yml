@@ -4,6 +4,8 @@ services:
   backend:
     image: strapi/strapi
     container_name: nextjs-strapi-boilerplate-backend
+    build:
+      context: .
     depends_on:
       - db
     environment:
