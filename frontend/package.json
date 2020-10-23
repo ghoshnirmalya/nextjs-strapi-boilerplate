@@ -16,7 +16,7 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
-    "dayjs": "^1.9.3",
+    "dayjs": "^1.9.4",
     "emotion-theming": "^10.0.27",
     "graphql": "^15.3.0",
     "next": "^9.5.5",
