@@ -23,9 +23,9 @@ const Feed: FC<IProps> = ({ feed }) => {
         borderBottomWidth={1}
         borderColor={borderColor[colorMode]}
       >
-        <Avatar name={feed.author.username} />
+      <Avatar name={feed.author === null ? "anonymous" : feed.author.username} />
         <Stack>
-          <Text fontWeight="bold">{feed.author.username}</Text>
+          <Text fontWeight="bold">{feed.author === null ? "anonymous" : feed.author.username}</Text>
           <Text>{timeFromNow(feed.created_at)}</Text>
         </Stack>
       </Stack>
