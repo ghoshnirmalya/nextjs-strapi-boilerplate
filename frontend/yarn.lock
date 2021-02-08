@@ -2156,10 +2156,10 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-auth@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.2.0.tgz#c6e10571e3ec5a4391421ee0884906ce1e08f94f"
-  integrity sha512-9CCDdPoDkQuFwnrTN2Azdv6bS0DbvkYtxAAMmKAu2FOzyk1j+UmehXeIu+fHeK6vyS8X/e7rS6nYGVtJxen3eA==
+next-auth@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.2.1.tgz#198999ea2ceef2edeba410216ebc34d728c585c5"
+  integrity sha512-Ahvoq2rt5hqc7FYSA73viMp9m3AsFAP3VfSEjDtszxmOYRLPxjf06+GcZZC0dfofruvnrYmUe9ldHmZTVpUUQA==
   dependencies:
     crypto-js "^4.0.0"
     futoin-hkdf "^1.3.2"
