@@ -5,12 +5,45 @@ import IAccount from "types/account";
 import iToken from "types/token";
 import IUser from "types/user";
 import ISession from "types/session";
+import axios from "axios";
 
 const options = {
   providers: [
     Providers.Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+    Providers.Credentials({
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "email", placeholder: "Email" },
+        password: { label: "Password", type: "Password" },
+      },
+      authorize: async ({ password, email }) => {
+        const authenticated = await axios
+          .post(`${process.env.NEXT_PUBLIC_API_URL}/auth/local`, {
+            identifier: email,
+            password: password,
+          })
+          .then((res) => {
+            return Promise.resolve(res.data);
+          })
+          .catch((err) => {
+            console.error(err);
+            return Promise.reject(null);
+          });
+
+        if (authenticated) {
+          return Promise.resolve({
+            id: authenticated.user.id,
+            name: authenticated.user.username,
+            email: authenticated.user.email,
+            jwt: authenticated.jwt,
+          });
+        } else {
+          return Promise.resolve(null);
+        }
+      },
     }),
   ],
   database: process.env.NEXT_PUBLIC_DATABASE_URL,
@@ -20,6 +53,7 @@ const options = {
   debug: true,
   callbacks: {
     session: async (session: ISession, user: IUser) => {
+      // We now have access to the jwt from strapi, and can use it for authenticated requests.
       session.jwt = user.jwt;
       session.id = user.id;
 
@@ -29,16 +63,22 @@ const options = {
       const isSignIn = user ? true : false;
 
       if (isSignIn) {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.accessToken}`
-        );
+        // For OAuth providers we need to get the the token from strapi here
+        if (typeof account.provider !== "undefined") {
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.accessToken}`
+          );
 
-        const data = await response.json();
+          const data = await response.json();
 
-        token.jwt = data.jwt;
-        token.id = data.user.id;
+          token.jwt = data.jwt;
+          token.id = data.user.id;
+        }
+        // If we are using credentials, we allready have the token from strapi
+        else {
+          (token.id = user.id), (token.jwt = user.jwt);
+        }
       }
-
       return Promise.resolve(token);
     },
   },
