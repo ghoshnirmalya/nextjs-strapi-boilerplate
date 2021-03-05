@@ -1963,10 +1963,10 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-auth@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.7.0.tgz#29dd88bfeb51e9039642f855bbc4a54977c5683e"
-  integrity sha512-RyvMnnPr1vVt5PXeky537mb6cQCohPyGFIZuukEeXTyNpBhcKz25ws6l8mQQqduPIj/qB3tlQrSu46lyEGwA+g==
+next-auth@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.8.0.tgz#4764daf3f701c7607139bc07636048f4852e425d"
+  integrity sha512-2nF3PTHnoRtbAWX2PJ21vU7rpP2NkiEXlh6MqDkN6t0SZ+YFXmg8aITDmQ3ruyTVcg37d5iaNxJH44ayTGegkQ==
   dependencies:
     crypto-js "^4.0.0"
     futoin-hkdf "^1.3.2"
