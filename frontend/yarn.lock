@@ -230,6 +230,20 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
 
+"@next-auth/prisma-legacy-adapter@canary":
+  version "0.0.1-canary.115"
+  resolved "https://registry.yarnpkg.com/@next-auth/prisma-legacy-adapter/-/prisma-legacy-adapter-0.0.1-canary.115.tgz#ef291c865f1ce9d85f660c85b0b0be16bd89c641"
+  integrity sha512-rIIisYBvVtxDbY9Lbm+HOLbZyOaaEmtGc9wDN3tJLDUu3sLJOXNN7Pz29ThS+gf2lpMxXnfvk587hxGrnhCghQ==
+
+"@next-auth/typeorm-legacy-adapter@canary":
+  version "0.0.2-canary.117"
+  resolved "https://registry.yarnpkg.com/@next-auth/typeorm-legacy-adapter/-/typeorm-legacy-adapter-0.0.2-canary.117.tgz#c71f7e5f3b474e8b292acaa8ad69d2a4537f93ba"
+  integrity sha512-sYJZPWMsM1ZTJcl749UojYDF4q8+ZiYcrR7rM4SACc0qiA9VBdOYUUMUMpQoazKOiwo1rWDKu4wHPt6CdV0ctQ==
+  dependencies:
+    crypto-js "^4.0.0"
+    require_optional "^1.0.1"
+    typeorm "^0.2.30"
+
 "@next/env@10.1.3":
   version "10.1.3"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.1.3.tgz#29e5d62919b4a7b1859f8d36169848dc3f5ddebe"
@@ -2020,11 +2034,13 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-auth@^3.17.2:
-  version "3.17.2"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.17.2.tgz#69b9cbde1403937600f3c528ab1c79ba76db39e9"
-  integrity sha512-09SmxrQgwftyGG2/JBsvUNUhtUjx330Tze96UL2kQpqp0nGJ2YGqWiTRkQ5ZEeXl29EYz1mHrZZYDefliWxAug==
+next-auth@^3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.18.0.tgz#fbd173021b56223e3bfd1e32db7c0a6ffbbed892"
+  integrity sha512-2d1KaIPGf4Cd9DLWCiq9dQx1xyZif14C4NoI+RzkvWMlI+PTkVYDUTKKzzpYA+5+qmubn2peMuEreJ1GIQWzkw==
   dependencies:
+    "@next-auth/prisma-legacy-adapter" canary
+    "@next-auth/typeorm-legacy-adapter" canary
     crypto-js "^4.0.0"
     futoin-hkdf "^1.3.2"
     jose "^1.27.2"
