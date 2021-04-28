@@ -2034,10 +2034,10 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-auth@^3.18.0:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.18.0.tgz#fbd173021b56223e3bfd1e32db7c0a6ffbbed892"
-  integrity sha512-2d1KaIPGf4Cd9DLWCiq9dQx1xyZif14C4NoI+RzkvWMlI+PTkVYDUTKKzzpYA+5+qmubn2peMuEreJ1GIQWzkw==
+next-auth@^3.19.2:
+  version "3.19.2"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.19.2.tgz#50b1bbba3cac9d3982ec5c02bff3ac8433c92a12"
+  integrity sha512-v6o0Gyxpw8rtfXXLWImLtoTClO/e9PL1F/CNW/BkCfyteWtnTNDSiQcRPi7pQWQUw3Fk7nQlJFXL6he547snJA==
   dependencies:
     "@next-auth/prisma-legacy-adapter" canary
     "@next-auth/typeorm-legacy-adapter" canary
