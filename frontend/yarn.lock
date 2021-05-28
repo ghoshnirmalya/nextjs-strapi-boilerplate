@@ -2021,10 +2021,10 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-auth@^3.23.3:
-  version "3.23.3"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.23.3.tgz#810b6c0362bd48ee1be2831fef270b89359522fd"
-  integrity sha512-e+As4q+uA4MnnL36P3JxKRKEvy2iPXn8AZ8A8v3wbAc91K6YVgjfDMs+uU30jYAV58u7CnWdypHCRUkF/5WDDA==
+next-auth@^3.24.0:
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-3.24.0.tgz#2fb1f5b9c7756ba16f81b95fb066833e3ef5525d"
+  integrity sha512-fLpjwYYDvPNexoCuGyPTozzos5ko7XSu9WXPn2d2qEVfhDG8BtwBcDZw+maIDOd9IEmsaZ+ljtdCC/CNjbLRAA==
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@next-auth/prisma-legacy-adapter" "0.0.1-canary.127"
