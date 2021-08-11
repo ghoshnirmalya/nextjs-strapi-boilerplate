@@ -205,10 +205,10 @@
   dependencies:
     "@octokit/openapi-types" "^9.4.0"
 
-"@release-it/conventional-changelog@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-3.0.1.tgz#5dafe9b670d377bb1914a8691ae2531e71859fb9"
-  integrity sha512-yQZquSPkr5J2nj6bxvLbnvIdYOhyzYMbFbMeoFaWxmxBNXQdkJrFhjvn4VhKGpeOjklr+9oOJVwNofEZtbOPxg==
+"@release-it/conventional-changelog@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-3.1.0.tgz#ec4b740f0789ce3bf12ef600c42e787c4e5f6b1c"
+  integrity sha512-dlqIs0Mgd5hubCkwHB6l1MN/BwdBFtlAL0C9vrnq5nuG/WREvFIz5W8kSEr+FCWARPFHlK3+J6Z3+FmxH12k5Q==
   dependencies:
     concat-stream "^2.0.0"
     conventional-changelog "^3.1.24"
