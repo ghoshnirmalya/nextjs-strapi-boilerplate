@@ -18,7 +18,7 @@
     "@emotion/styled": "^10.0.27",
     "dayjs": "^1.10.7",
     "emotion-theming": "^10.0.27",
-    "graphql": "^15.7.2",
+    "graphql": "^16.0.1",
     "next": "^12.0.4",
     "next-auth": "^3.29.0",
     "pg": "^8.7.1",
