@@ -15,7 +15,7 @@
     "@apollo/client": "^3.5.5",
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.1.1",
-    "@emotion/styled": "^10.0.27",
+    "@emotion/styled": "^10.3.0",
     "dayjs": "^1.10.7",
     "emotion-theming": "^10.0.27",
     "graphql": "^16.0.1",
