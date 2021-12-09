@@ -128,10 +128,10 @@
     "@emotion/utils" "0.11.3"
     "@emotion/weak-memoize" "0.2.5"
 
-"@emotion/core@^10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.3.0.tgz#d027fce912e2f8e03eb61cb67e52df964e52950f"
-  integrity sha512-C4+RI1gNycUbfg2Zojt3lcVQVWocMLK4jiwl5tO/Z5I3zyGmG+oKJl6+/uPtQeUDPN7WXHN8TQ7bqc+dnljZ0w==
+"@emotion/core@^10.3.1":
+  version "10.3.1"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.3.1.tgz#4021b6d8b33b3304d48b0bb478485e7d7421c69d"
+  integrity sha512-447aUEjPIm0MnE6QYIaFz9VQOHSXf4Iu6EWOIqq11EAPqinkSZmfymPTmlOE3QjLv846lH4JVZBUOtwGbuQoww==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/cache" "^10.0.27"
