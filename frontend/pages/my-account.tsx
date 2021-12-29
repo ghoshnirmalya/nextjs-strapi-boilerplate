@@ -3,7 +3,7 @@ import Head from "next/head";
 import Page from "components/pages/my-account";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import AccessDeniedIndicator from "components/access-denied-indicator";
-import { getSession } from "next-auth/client";
+import { getSession } from "next-auth/react";
 import WithGraphQL from "lib/with-graphql";
 
 const MyAccountPage: InferGetServerSidePropsType<typeof getServerSideProps> = ({
