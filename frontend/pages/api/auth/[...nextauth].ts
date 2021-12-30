@@ -19,6 +19,30 @@ const options = {
     strategy: "jwt",
   },
   debug: true,
+  callbacks: {
+    async session({ session, token, user }) {
+      session.jwt = token.jwt;
+      session.id = token.id;
+
+      return session;
+    },
+    async jwt({ token, user, account, profile, isNewUser }) {
+      const isSignIn = user ? true : false;
+
+      if (isSignIn) {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.access_token}`
+        );
+
+        const data = await response.json();
+
+        token.jwt = data.jwt;
+        token.id = data.user.id;
+      }
+
+      return token;
+    },
+  },
 };
 
 const Auth = (req: NextApiRequest, res: NextApiResponse) =>
