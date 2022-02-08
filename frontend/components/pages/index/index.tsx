@@ -8,11 +8,11 @@ import {
   Flex,
   useColorMode,
 } from "@chakra-ui/core";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 const IndexPageComponent = () => {
-  const [session] = useSession();
+  const { data:session, status } = useSession();
   const heightOfNavbar: string = "74px";
   const containerPadding: string = "1rem";
   const { colorMode } = useColorMode();

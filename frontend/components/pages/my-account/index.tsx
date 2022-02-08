@@ -15,7 +15,7 @@ import {
   useColorMode,
 } from "@chakra-ui/core";
 import Loader from "components/loader";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import React, { FormEvent, useEffect, useState } from "react";
 
 const usersQuery = gql`
@@ -45,7 +45,7 @@ const MyAccountPageComponent = () => {
   const bgColor = { light: "white", dark: "gray.800" };
   const color = { light: "gray.800", dark: "gray.100" };
   const [username, setUsername] = useState("");
-  const [session] = useSession();
+  const { data:session, status } = useSession();
 
   const {
     loading: fetchUserFetching,

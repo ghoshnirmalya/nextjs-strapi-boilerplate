@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import GoogleProvider from "next-auth/providers/google";
 import IAccount from "types/account";
 import iToken from "types/token";
 import IUser from "types/user";
@@ -8,29 +8,30 @@ import ISession from "types/session";
 
 const options = {
   providers: [
-    Providers.Google({
+    GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret:"5xT45s7AKNuQREg7gF9LoQSXwW/dL62hAEKKfk/rk8k=", //PUT YOUR OWN SECRET (command: openssl rand -base64 32)
   database: process.env.NEXT_PUBLIC_DATABASE_URL,
   session: {
-    jwt: true,
+    strategy: "jwt",
   },
   debug: true,
   callbacks: {
-    session: async (session: ISession, user: IUser) => {
-      session.jwt = user.jwt;
-      session.id = user.id;
+    async session({ session, token, user }) {
+      session.jwt = token.jwt;
+      session.id = token.id;
 
-      return Promise.resolve(session);
+      return session;
     },
-    jwt: async (token: iToken, user: IUser, account: IAccount) => {
+    async jwt({ token, user, account, profile, isNewUser }) {
       const isSignIn = user ? true : false;
 
       if (isSignIn) {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.accessToken}`
+          `${process.env.NEXT_PUBLIC_API_URL}/auth/${account.provider}/callback?access_token=${account?.access_token}`
         );
 
         const data = await response.json();
@@ -39,7 +40,7 @@ const options = {
         token.id = data.user.id;
       }
 
-      return Promise.resolve(token);
+      return token;
     },
   },
 };

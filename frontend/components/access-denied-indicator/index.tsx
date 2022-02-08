@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Icon, Flex, Button, Stack, Box } from "@chakra-ui/core";
 import Link from "next/link";
-import { signIn } from "next-auth/client";
+import { signIn } from "next-auth/react";
 
 interface IProps {
   message?: string;

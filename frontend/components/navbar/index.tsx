@@ -1,7 +1,7 @@
 import React from "react";
 import { NextComponentType } from "next";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/react";
 import {
   Box,
   Stack,
@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/core";
 
 const Navbar: NextComponentType = () => {
-  const [session] = useSession();
+  const { data:session, status } = useSession();
   const { colorMode, toggleColorMode } = useColorMode();
   const bgColor = { light: "white", dark: "gray.800" };
   const color = { light: "gray.800", dark: "gray.100" };

@@ -13,7 +13,7 @@ import {
   Textarea,
   useColorMode,
 } from "@chakra-ui/core";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import AccessDeniedIndicator from "components/access-denied-indicator";
 
 const insertFeedMutation = gql`
@@ -32,7 +32,7 @@ const AddNewFeedForm = () => {
   const bgColor = { light: "white", dark: "gray.800" };
   const color = { light: "gray.800", dark: "gray.100" };
   const [body, setBody] = useState("");
-  const [session] = useSession();
+  const { data:session, status } = useSession();
 
   if (!session) {
     return (
