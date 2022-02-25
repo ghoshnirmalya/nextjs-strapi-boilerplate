@@ -7,7 +7,7 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^4.1.0",
+    "@release-it/conventional-changelog": "^4.2.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
