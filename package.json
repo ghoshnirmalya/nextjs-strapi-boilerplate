@@ -11,7 +11,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
-    "release-it": "^14.14.2"
+    "release-it": "^14.14.3"
   },
   "husky": {
     "hooks": {
