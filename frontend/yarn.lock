@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.6.2":
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.6.2.tgz#0418bfa6358dd117894c8af396706cfa2b186032"
-  integrity sha512-DNWyl+NNU2VsfHtXwOr4rV9hnQFPkl2/dNXeouhk9q7bXCWdEh3K8YTt/frULGVKbQjtnlPmz8C+LFI/JZ2N3w==
+"@apollo/client@^3.6.4":
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.6.4.tgz#08b726d72bb207f27ed1aeb0025bc4d32d776a9e"
+  integrity sha512-2z0dzQpx2HhGK5Pip/rbMM5kkbE4BLZGK2ItSmy2lMPy9/SZGFnw+zWBXSoIook0JT2bDscm+FsdmtV+1AhdJw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/context" "^0.6.0"
@@ -16,10 +16,9 @@
     optimism "^0.16.1"
     prop-types "^15.7.2"
     symbol-observable "^4.0.0"
-    ts-invariant "^0.10.0"
+    ts-invariant "^0.10.3"
     tslib "^2.3.0"
-    use-sync-external-store "^1.0.0"
-    zen-observable-ts "^1.2.0"
+    zen-observable-ts "^1.2.5"
 
 "@babel/code-frame@^7.0.0":
   version "7.10.4"
@@ -1295,10 +1294,10 @@ toggle-selection@^1.0.6:
   resolved "https://registry.yarnpkg.com/toggle-selection/-/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
   integrity sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
 
-ts-invariant@^0.10.0:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.10.1.tgz#df002059ffcc3f94b5064fa74e32796434cd1b06"
-  integrity sha512-dOmY3naALBtNyK+nrVGzD8DVxSJ9OIHragItZ3XvxGORNAZL6uszgQYaD3PW+TPh2NWNsOpuQUxznuvTkmcdqw==
+ts-invariant@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.10.3.tgz#3e048ff96e91459ffca01304dbc7f61c1f642f6c"
+  integrity sha512-uivwYcQaxAucv1CzRp2n/QdYPo4ILf9VXgH19zEIjFx2EJufV16P0JtJVpYHy89DItG6Kwj2oIUjrcK5au+4tQ==
   dependencies:
     tslib "^2.1.0"
 
@@ -1385,11 +1384,6 @@ use-sidecar@^1.0.1:
     detect-node-es "^1.0.0"
     tslib "^1.9.3"
 
-use-sync-external-store@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.1.0.tgz#3343c3fe7f7e404db70f8c687adf5c1652d34e82"
-  integrity sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==
-
 uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
@@ -1422,10 +1416,10 @@ yaml@^1.7.2:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.0.tgz#3b593add944876077d4d683fee01081bd9fff31e"
   integrity sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==
 
-zen-observable-ts@^1.2.0:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-1.2.3.tgz#c2f5ccebe812faf0cfcde547e6004f65b1a6d769"
-  integrity sha512-hc/TGiPkAWpByykMwDcem3SdUgA4We+0Qb36bItSuJC9xD0XVBZoFHYoadAomDSNf64CG8Ydj0Qb8Od8BUWz5g==
+zen-observable-ts@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-1.2.5.tgz#6c6d9ea3d3a842812c6e9519209365a122ba8b58"
+  integrity sha512-QZWQekv6iB72Naeake9hS1KxHlotfRpe+WGNbNx5/ta+R3DNjVO2bswf63gXlWDcs+EMd7XY8HfVQyP1X6T4Zg==
   dependencies:
     zen-observable "0.8.15"
 
