@@ -20,7 +20,7 @@
     "emotion-theming": "^10.3.0",
     "graphql": "^16.5.0",
     "next": "^12.1.6",
-    "next-auth": "^4.3.4",
+    "next-auth": "^4.4.0",
     "pg": "^8.7.3",
     "react": "18.1.0",
     "react-dom": "18.1.0"
