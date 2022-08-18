@@ -190,14 +190,15 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
-"@release-it/conventional-changelog@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-5.0.0.tgz#2359e19f7d609c60c31a680faaaeead6efc752d7"
-  integrity sha512-YAvGgxA8cIQSbmyHmAmLMwzCkNP74upLST8jFuDJTI+AVfK2Grp2HbZu0/NeV3sHYD20sT8YMzNVUeRxNlyHeg==
+"@release-it/conventional-changelog@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-5.1.0.tgz#94ed149775468a08035c6102014f6e8496472a76"
+  integrity sha512-o55D822tVIoldUDj1Fp1KvenVREcEEjYOyuVNwRVnTcExFN6nWUPrH05q7Y8opT23N5snuCwPJ5bzLPEcpBvRg==
   dependencies:
     concat-stream "^2.0.0"
     conventional-changelog "^3.1.25"
     conventional-recommended-bump "^6.1.0"
+    semver "^7.3.7"
 
 "@sindresorhus/is@^5.2.0":
   version "5.3.0"
