@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/next": "^9.0.0",
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.15.2",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^18.0.5",
     "tslint": "^6.1.3",
