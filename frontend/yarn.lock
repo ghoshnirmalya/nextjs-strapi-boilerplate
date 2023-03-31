@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.7.0.tgz#1c26a04488f45b3a4779fa2562e4b706402cb876"
-  integrity sha512-hp4OvrH1ZIQACRYcIrh/C0WFnY7IM7G6nlTpC8DSTEWxfZQ2kvpvDY0I/hYmCs0oAVrg26g3ANEdOzGWTcYbPg==
+"@apollo/client@^3.7.11":
+  version "3.7.11"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.7.11.tgz#fbe9ac3cd508123aacae370dfb3d268fd74f3a44"
+  integrity sha512-uLg2KtxoAyj9ta7abLxXx8cGRM7HypCkXVmxtL7Ko//N5g37aoJ3ca7VYoFCMUFO1BXBulj+yKVl0U3+ILj5AQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/context" "^0.7.0"
@@ -13,7 +13,7 @@
     "@wry/trie" "^0.3.0"
     graphql-tag "^2.12.6"
     hoist-non-react-statics "^3.3.2"
-    optimism "^0.16.1"
+    optimism "^0.16.2"
     prop-types "^15.7.2"
     response-iterator "^0.2.6"
     symbol-observable "^4.0.0"
@@ -484,13 +484,6 @@
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@use-it/event-listener/-/event-listener-0.1.5.tgz#870456241bfef66acea6395c69b66fe516bee3cd"
   integrity sha512-SWbhB0iFcoNL1BEldApGTqfB9aoGpU82iZUVTBtZaTFNrVKAGwuQTF15N9MzRvTgyuOASWf1pCKXbdVtKZgeRg==
-
-"@wry/context@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@wry/context/-/context-0.6.0.tgz#f903eceb89d238ef7e8168ed30f4511f92d83e06"
-  integrity sha512-sAgendOXR8dM7stJw3FusRxFHF/ZinU0lffsA2YTyyIOfic86JX02qlPqPVqJNZJPAxFt+2EE8bvq6ZlS0Kf+Q==
-  dependencies:
-    tslib "^2.1.0"
 
 "@wry/context@^0.7.0":
   version "0.7.0"
@@ -976,12 +969,12 @@ openid-client@^5.1.0:
     object-hash "^2.0.1"
     oidc-token-hash "^5.0.1"
 
-optimism@^0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.16.1.tgz#7c8efc1f3179f18307b887e18c15c5b7133f6e7d"
-  integrity sha512-64i+Uw3otrndfq5kaoGNoY7pvOhSsjFEN4bdEFh80MWVk/dbgJfMv7VFDeCT8LxNAlEVhQmdVEbfE7X2nWNIIg==
+optimism@^0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.16.2.tgz#519b0c78b3b30954baed0defe5143de7776bf081"
+  integrity sha512-zWNbgWj+3vLEjZNIh/okkY2EUfX+vB9TJopzIZwT1xxaMqC5hRLLraePod4c5n4He08xuXNH+zhKFFCu390wiQ==
   dependencies:
-    "@wry/context" "^0.6.0"
+    "@wry/context" "^0.7.0"
     "@wry/trie" "^0.3.0"
 
 packet-reader@1.0.0:
