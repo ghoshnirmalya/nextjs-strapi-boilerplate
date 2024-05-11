@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/nirmalyaghosh23">
-    <img alt="Twitter: Nirmalya Ghosh" src="https://img.shields.io/twitter/follow/NirmalyaGhosh_.svg?style=social" target="_blank" />
+  <a href="https://twitter.com/ghoshnirmalya_">
+    <img alt="Twitter: Nirmalya Ghosh" src="https://img.shields.io/twitter/follow/ghoshnirmalya_.svg?style=social" target="_blank" />
   </a>
 </p>
 
